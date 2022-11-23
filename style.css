@@ -1,0 +1,342 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* -- index */
+
+
+.parallaxi{
+    height: 400px;
+    width: 100%;
+    background-image: url(./image/interior4.jpeg);
+    background-position: 80% 80%;
+    background-repeat: no-repeat;
+    background-attachment: fixed  ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+ /* -- efecto hover sobre cajas */
+ 
+ .container-all{
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+ 
+ 
+}
+
+ 
+ .container-box{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ position: relative;
+  
+
+}
+
+.boxe{
+ position: relative;
+  width: 300px;
+  height: 300px;
+  border: solid rgba(218, 156, 24, 0.877);
+ background-image: url(./image/8.jpeg);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+  margin: 10px;
+  text-align: center;
+  overflow: hidden;
+   
+  
+}
+
+.boxe .boton-one,
+.boxe .title2,
+.boxe .parrafoe{
+  position: relative;
+}
+
+.boxe .title2,
+.boxe .parrafoe{
+  margin-top: 10px;
+}
+
+.title{
+  color: white;
+  font-size: 30px;
+  position: relative ;
+  padding: 5px;
+  z-index: 1;
+  transform: translateY(80px);
+  transition: all 200ms;
+  margin-bottom:250px;
+}
+
+
+.boxe:hover .h2t{
+  transform: translate(0);
+  color: white;
+}
+
+.boton-one{
+  border: solid;
+  background-color: blueviolet;
+  height: 10%;
+  width: 40%;
+   z-index: 1;
+  transform: translateY(100px);
+  opacity: 0;
+ 
+}
+.boxe:hover .boton-one{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.boxe:hover{
+    transform: translate(5px, -5px);
+    box-shadow: -10px 10px 20px -10px rgba(0, 0, 0, 0.5);
+  }
+
+
+  .title2 {
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 20PX;
+    z-index: 1;
+    transform: translateY(2px);
+    opacity: 1;
+   
+    
+  }
+
+  .boxe:hover .title {
+    transform: translate(0);
+    opacity: 1;
+    color: white;
+
+  }
+
+  .parrafoe{
+    position: relative;
+    z-index: 1;
+    background-color: aquamarine;
+    text-align: center;
+    
+    font-size: 14px;
+     padding: 15px;
+     transform: translateY(100px);
+    opacity: 0;
+        
+  }
+
+  .boxe:hover .parrafoe{
+    transform: translateY(0);
+    opacity: 1;
+    color: white;
+  }
+
+
+  .background-hover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color:rgba(218, 156, 24, 0.877);
+     top: 350px;
+    nav-left: -190px;
+    border-radius: 100%;
+    transition: all 300ms;
+
+  }
+
+ .boxe:hover .background-hover{
+    width: 500px;
+    height: 500px;
+    top: -80px;
+    left: -80px;
+ }
+
+
+  
+/* -- Portfolio */
+
+.blopaparallax{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.conpa h1{
+    margin: 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    color: white;
+    
+    
+    
+  }
+  
+  .conpa p{
+    font-size: 18px;
+    text-align:center;
+    color: white;
+       
+   
+  }
+ 
+   .parallax{
+    height: 400px;
+    width: 100%;
+    background-image: url(./image/6.jpeg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed  ;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  /* -- Menu Portfolio */
+.fondomenu{
+    background-color: white;
+    
+}
+
+.img-menu{
+    width: 50px;
+    height: 50px ;
+}
+
+   /* -- Galeria */   
+.contenedorg{
+    width: 100%;
+}
+
+a img{
+    width: 100%;
+}
+.gale{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1%;
+    row-gap: 1%;
+    padding: 2%;
+}
+
+.gale img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s;
+    
+}
+
+.gale a{
+    overflow: hidden;
+}
+
+.gale a:hover
+   img{ 
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+    
+    
+}
+
+.box-efec{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0,0, .5);
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: transform .3s ease-in-out;
+    transform: scale(0);
+    
+}
+
+.box-efec img{
+    width: 100vh;
+    max-height: 100vh;
+}
+
+.box-efec:target{
+    transform: scale(1);
+}
+
+.cerrar{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+}
+
+.siguiente{
+    display: block;
+    background: white;
+    color: black;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    text-align: center;
+}
+
+.atras{
+        display: block;
+        background: white;
+        color: black;
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+        border-radius: 50%;
+        text-decoration: none;
+        text-align: center;
+    }
+
+
+    @media (min-width: 320px) {
+        .conpa h1{
+            font-size: 25px;
+    }
+
+    .conpa p{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 468px) {
+    .conpa h1{
+        font-size: 50px;
+    }
+    .conpa p{
+        font-size: 20px;
+    }
+}
+
